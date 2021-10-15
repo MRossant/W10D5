@@ -1,10 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Clock from './clock';
+import Tabs from './tabs';
+
+const panes = [
+  { title: 'one', content: 'I am the first' },
+  { title: 'two', content: 'Second pane here' },
+  { title: 'three', content: 'Third pane here' },
+];
 
 document.addEventListener("DOMContentLoaded", () => {
   const root = document.getElementById("root");
-  // const h1 = React.createElement('h1', null, ['React is working!']); //non-jsx method
-  // const app = <App /> //if you were to use a variable instead of putting directly into ReactDOM.render
   ReactDOM.render(<Clock/>, root);
+  ReactDOM.render(<Tabs tabs={panes}/>, root);
 });
