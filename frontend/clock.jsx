@@ -26,7 +26,13 @@ class Clock extends React.Component{
 
     render(){
         return(
-            <h1>{this.state.time.getHours()}:{this.state.time.getMinutes()}:{this.state.time.getSeconds()}</h1>
+            <div>
+                <h1>Time:</h1>
+                <h1>{this.state.time.getHours()}:{this.state.time.getMinutes()}:{this.state.time.getSeconds()}</h1>
+                
+                <h1>Date:</h1>
+                <h1>{this.state.time.getMonth() + 1}/{this.state.time.getDate()}/{this.state.time.getFullYear()}</h1>
+            </div>
         )
     }
 }
